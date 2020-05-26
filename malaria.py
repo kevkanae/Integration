@@ -6,6 +6,7 @@ from keras.models import Sequential
 from keras.models import load_model
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
+from keras.callbacks import History 
 import numpy as np
 
 model = Sequential()
@@ -38,7 +39,7 @@ test_set = test_datagen.flow_from_directory(
         target_size=(28, 28),
         batch_size=32,
         class_mode='binary')
-model.fit(
+history=model.fit(
         training_set,
         steps_per_epoch=2000,
         epochs=2,
