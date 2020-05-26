@@ -29,12 +29,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        'cell_images/training_set/',
+        '/keras/cell_images/training_set/',
         target_size=(28, 28),
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        'cell_images/testing_set/',
+        '/keras/cell_images/testing_set/',
         target_size=(28, 28),
         batch_size=32,
         class_mode='binary')
