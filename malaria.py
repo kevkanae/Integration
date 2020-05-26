@@ -61,12 +61,10 @@ else:
 
 #**************************
 
-acc=model.evaluate(training_set)
-accuracy=str(acc[1])
-f = open("k.txt", "w")
-f.write(accuracy)
+print(history.history['accuracy'][0]*100)
+f = open("ModelAccuracy.txt", "w")
+f.write('%d' % int(history.history['accuracy'][0]*100))
 f.close()
-
 
 model.save('Malarial-Cell-Prediction-Model.h5')
 
