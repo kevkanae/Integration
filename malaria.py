@@ -61,13 +61,13 @@ else:
     print('Parasitized')
 
 #**************************
-
+filepath='/keras/Accuracy.txt'
 print(history.history['accuracy'][0]*100)
-f = open("ModelAccuracy.txt", "w")
-f.write('%d' % int(history.history['accuracy'][0]*100))
+f = open(filepath,"w")
+f.write('%f' % int(history.history['accuracy'][0]*100))
 f.close()
 
-if 'Model.Accuracy.txt':
+if 'ModelAccuracy.txt':
     print('Accuracy File Saved')
 else:
     print('Accuracy File Not Saved')
