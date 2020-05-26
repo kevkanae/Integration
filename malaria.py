@@ -67,7 +67,7 @@ f = open(filepath,"w")
 f.write('%f' % int(history.history['accuracy'][0]*100))
 f.close()
 
-if 'ModelAccuracy.txt':
+if 'Accuracy.txt':
     print('Accuracy File Saved')
 else:
     print('Accuracy File Not Saved')
