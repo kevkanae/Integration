@@ -67,5 +67,9 @@ f = open("ModelAccuracy.txt", "w")
 f.write('%d' % int(history.history['accuracy'][0]*100))
 f.close()
 
-model.save('Malarial-Cell-Prediction-Model.h5')
+if 'Model.Accuracy.txt':
+    print('Accuracy File Saved')
+else:
+    print('Accuracy File Not Saved')
 
+model.save('Malarial-Cell-Prediction-Model.h5')
