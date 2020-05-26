@@ -8,8 +8,6 @@ from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 
-m = load_model('Malarial-Cell-Prediction-Model.h5')
-
 model = Sequential()
 
 model.add(Convolution2D(filters=32,kernel_size=(3,3),  activation='relu',input_shape=(28, 28, 3)))
