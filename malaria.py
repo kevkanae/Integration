@@ -40,8 +40,8 @@ test_set = test_datagen.flow_from_directory(
         class_mode='binary')
 model.fit(
         training_set,
-        steps_per_epoch=3000,
-        epochs=5,
+        steps_per_epoch=2000,
+        epochs=2,
         validation_data=test_set,
         validation_steps=800)
 
