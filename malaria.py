@@ -52,14 +52,12 @@ test_image.shape
 test_image = np.expand_dims(test_image, axis=0)
 test_image.shape
 
-result = m.predict(test_image)
+result = model.predict(test_image)
 
 if result[0][0] == 1.0:
     print('Uninfected')
 else:
     print('Parasitized')
-
-r = training_set.class_indices #tells no. of infected or unifected images predicted
 
 #**************************
 
