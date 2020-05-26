@@ -46,7 +46,7 @@ model.fit(
         validation_steps=800)
 
 
-test_image = image.load_img('cell_images/prediction_set/I3.png',target_size=(28,28))
+test_image = image.load_img('keras/cell_images/prediction_set/I3.png',target_size=(28,28))
 test_image = image.img_to_array(test_image)
 test_image.shape
 test_image = np.expand_dims(test_image, axis=0)
