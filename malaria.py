@@ -30,12 +30,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        '/keras/cell_images/training_set/',
+        '/dock/cell_images/training_set/',
         target_size=(28, 28),
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        '/keras/cell_images/testing_set/',
+        '/dock/cell_images/testing_set/',
         target_size=(28, 28),
         batch_size=32,
         class_mode='binary')
@@ -47,7 +47,7 @@ history=model.fit(
         validation_steps=800)
 
 
-test_image = image.load_img('keras/cell_images/prediction_set/I3.png',target_size=(28,28))
+test_image = image.load_img('dock/cell_images/prediction_set/I3.png',target_size=(28,28))
 test_image = image.img_to_array(test_image)
 test_image.shape
 test_image = np.expand_dims(test_image, axis=0)
@@ -61,7 +61,7 @@ else:
     print('Parasitized')
 
 #**************************
-filepath='/keras/Accuracy.txt'
+filepath='/dock/Accuracy.txt'
 print(history.history['accuracy'][0]*100)
 f = open(filepath,"w")
 f.write('%f' % int(history.history['accuracy'][0]*100))
