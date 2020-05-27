@@ -64,7 +64,7 @@ else:
 filepath='/dock/Accuracy.txt'
 print(history.history['accuracy'][0]*100)
 f = open(filepath,"w")
-f.write('%f' % int(history.history['accuracy'][0]*100))
+f.write('%d' % int(history.history['accuracy'][0]*100))
 f.close()
 
 if 'Accuracy.txt':
